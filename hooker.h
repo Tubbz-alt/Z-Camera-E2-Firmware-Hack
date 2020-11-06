@@ -64,3 +64,5 @@ extern const uint8_t abs_call_aarch64_bytecode[8];
     memcpy((void*)HOOK_ORIG_ADDR_NAME(function_name), HOOK_STRUCT_NAME(function_name).hook_prologue, HOOK_PROLOGUE_SIZE); \
     /*log_print("[HOOK] Renabled hook for %s; memory after renable:\n", #function_name);*/ \
     /*log_memory((uint8_t*)HOOK_ORIG_ADDR_NAME(function_name), HOOK_PROLOGUE_SIZE);*/;
+
+void hooker_init();

@@ -50,11 +50,9 @@ void on__imvt_led_camera_event_handler(uint64_t address)
 void on__imvt_cam_movie_start(uint32_t stream_style)
 {
     log_print("[imvt_cam_movie_start] stream_style = %u\n", stream_style);
-    rec_notificator_show();
 }
 
 void on__imvt_cam_movie_stop(uint32_t stream_style)
 {
     log_print("[imvt_cam_movie_stop] stream_style = %u\n", stream_style);
-    rec_notificator_hide();
 }

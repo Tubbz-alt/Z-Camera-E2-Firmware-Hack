@@ -159,18 +159,8 @@ void HOOK__imvt_cam_movie_stop(uint32_t stream_style)
     asm("BR X9");
 }
 
-/*
- * init()
- *
- * Hello world function exported by the sample library.
- *
- */
-
-void init()
+void hooker_init()
 {
-    log_init();
-    rec_notificator_init();
-
     log_print("[SC] Injecting...\n");
     //PROC_HOOK_IMVT_FUNCTION(fmt_muxer_start_record, &HOOK__fmt_muxer_start_record);
     //PROC_HOOK_IMVT_FUNCTION(fmt_muxer_stop_record, &HOOK__fmt_muxer_stop_record);
@@ -183,17 +173,4 @@ void init()
     //PROC_HOOK_IMVT_FUNCTION(imvt_cam_movie_start, &HOOK__imvt_cam_movie_start);
     //PROC_HOOK_IMVT_FUNCTION(imvt_cam_movie_stop, &HOOK__imvt_cam_movie_stop);
     log_print("[SC] Injected!\n");
-}
-
-/*
- * loadMsg()
- *
- * This function is automatically called when library is injected into a process.
- *
- */
-
-__attribute__((constructor))
-void loadMsg()
-{
-	init();
 }
